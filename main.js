@@ -66,6 +66,16 @@
     { opacity: 1, y: 0, stagger: 0.6, ease: 'power2.out' }
   );
 
+  /* ---------- About: lines rise in ---------- */
+  gsap.from('.about__reveal', {
+    y: 40,
+    opacity: 0,
+    stagger: 0.1,
+    duration: 0.8,
+    ease: 'power3.out',
+    scrollTrigger: { trigger: '.about', start: 'top 65%' }
+  });
+
   /* ---------- Stats: ring fills, numbers count up ---------- */
   const statsTl = gsap.timeline({
     scrollTrigger: { trigger: '.stats', start: 'top 75%', end: 'center 45%', scrub: true }
